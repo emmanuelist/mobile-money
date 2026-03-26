@@ -10,6 +10,7 @@ export interface AuthRequest extends Request {
 
 // Extend Request interface to include JWT user information
 declare global {
+  // eslint-disable-next-line @typescript-eslint/no-namespace
   namespace Express {
     interface Request {
       jwtUser?: JWTPayload;
